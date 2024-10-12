@@ -1,0 +1,296 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    padding: 20px; /* Padding for the content */
+    border-radius: 10px; /* Optional: Rounded corners */
+    margin: 20px auto; /* Center the container */
+    max-width: 1200px; /* Optional: Limit the width */
+}
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Dark background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    z-index: 1000; /* Bring navbar above all content */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Navbar Container */
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Nav Links */
+.nav-links ul {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    align-items: center;
+    color: #fff; /* White text color */
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Slightly rounded edges */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: #007bff; /* Accent color */
+    color: #fff;
+}
+
+/* Sticky Effect on Scroll */
+.navbar.scrolled {
+    background-color: #222; /* Darker background when scrolled */
+    padding: 8px 20px; /* Reduced padding */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive - Center Items on Small Screens */
+@media (max-width: 768px) {
+    .nav-links ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* Ensure content does not overlap with the navbar */
+body {
+    padding-top: 0; /* Set padding to 0 for no gap between navbar and hero section */
+}
+
+/* Hero Section Styling */
+/* Hero Section Styling */
+.hero {
+    background-image: url('background.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the background covers the entire area */
+    background-position: center; /* Centers the background image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: rgb(0, 0, 0); /* Text color */
+    text-align: center; /* Center text alignment */
+    animation: backgroundAnimation 20s ease infinite; /* Apply animation */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Keyframes for Background Animation */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 0%; /* Starting position */
+    }
+    50% {
+        background-position: 100% 100%; /* Midway position */
+    }
+    100% {
+        background-position: 0% 0%; /* Return to start */
+    }
+}
+
+.intro {
+    padding: 20px;
+}
+
+.typing-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid;
+    animation: typing 4s steps(30, end), blink 0.6s infinite step-end;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* About Section */
+/* About Section Styling */
+.about {
+    display: flex;
+    background-color: #fff; /* Use a solid color instead of the image */
+    padding: 50px;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-content {
+    display: flex;
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.about-image {
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff; /* Border color to match your theme */
+}
+
+.about-text {
+    flex: 1; /* Allow the text section to take up remaining space */
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #007bff; /* Header color */
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    line-height: 1.6; /* Improved readability */
+    margin: 10px 0;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+.skills span {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth color change */
+}
+
+.skills span:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slightly move down */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Back to original position */
+    }
+}
+
+.about {
+    animation: fadeIn 1s ease-in-out; /* Apply the fade-in animation */
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.facebook {
+    background-color: #3b5998; /* Facebook color */
+}
+
+.instagram {
+    background: radial-gradient(circle at 30% 30%, #fdf497, #fdf497, #fd5949, #d6249f, #285AEB);
+}
+
+.whatsapp {
+    background-color: #25D366; /* WhatsApp color */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+/* Services Section */
+.services {
+    padding: 50px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between boxes */
+    justify-items: center; /* Center align boxes */
+}
+
+.service-item {
+    background-image: url('box.jpg'); /* Background image */
+    background-size: cover; /* Cover to fill the box */
+    background-position: center; /* Center the image */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effect */
+    text-align: center; /* Center text */
+    color: white; /* Change text color to white */
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.coming-soon {
+    background-color: #ffc107; /* Yellow background for coming soon */
+    color: #fff; /* White text */
+    font-weight: bold; /* Bold text */
+    background-image: url('course.jpg'); /* Background image */
+    background-size: cover; /* Cover to fill the box */
+    background-position: center; /* Center the image */
+}
